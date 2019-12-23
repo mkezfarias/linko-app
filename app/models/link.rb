@@ -1,3 +1,4 @@
 class Link < ApplicationRecord
-    validates :title, presence: true
+    validates :url, :priority,  presence: true
+    validates :url, length: { minimum: 5 }
 end

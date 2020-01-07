@@ -1,0 +1,179 @@
+:root {
+--myred: #E34551;
+--myblue: #0081FF;
+--myblack: #1D1E20;
+--myorange: #FFAD00;
+--mygreen: #A9B929;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  list-style-type: none;
+  text-decoration: none;  
+  }
+
+.add-btn {
+    display: inline-block;
+}
+.button {        
+          border-left:none;
+          border-right:none;
+          border-top: none;
+          border-radius: 8px;
+          margin-top: 10px;
+          padding: 12px 20px;
+          font-size: 18px;
+          font-weight: 700;
+          color: white;
+        }
+
+.header {
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: space-around;
+  background-color: var(--myblue) ; 
+  padding: 15px;
+    
+  .logo {
+    margin: 5px;
+    background-image: url("http://github.com/mkezmkez/linko-app/blob/development/app/assets/images/logo-linko.png?raw=true");
+    height: 70px;
+    width: 180px;
+    background-position: center;
+    background-size: cover;
+    }
+  }
+  .navbar {
+  
+    .add-url {
+      justify-content: center;
+      
+      .input {
+        width: 500px;
+        margin-top:10px;
+        height: 55px;
+        border-radius: 8px;
+        font-size: 18px;
+        padding: 10px;
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+                
+        .add {
+          background-color: rgba(0,0,0,0);
+          border: none;
+        }
+        .high {
+          background-color: var(--myred);
+          border-bottom: solid #B61B27 5px;
+        }
+        .med {
+          background-color: var(--myorange);
+          border-bottom: solid #E89300 5px;
+        }
+        .low {
+          background-color: var(--mygreen);
+          border-bottom: solid green 5px;
+        }
+
+      }
+    
+    }
+  }
+
+.sign-out {
+  width: 10%;
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  background-color: rgba(250,250,250,.2);
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 9fr;
+  
+  .sidebar {
+   grid-column: 1 / 2;
+   background-color: var(--myblack);
+    form {   
+      margin-top: 20px 0;
+     .search {
+        height: 2rem;
+        width: 10rem;
+        border-radius: .4rem;
+        font-size: .9rem;
+        padding: 1rem;
+        border: none;
+        margin: .5rem 0 .5rem .5rem;
+      }
+      .go.go.go {
+        background-color: var(--myblue);
+        height: 2rem;
+        border-bottom: solid blue;
+        padding: 0 10px;
+      }
+     }
+    .show {
+      color: white;
+      margin: 20px 0 10px 10px;
+      
+      .title {
+        padding: 10px 0 0 0;
+        font-weight: 700
+      }
+      li {
+        padding: 10px 5px;
+      }
+      a { 
+        color: var(--myblue);
+        font-weight: 700
+      }
+      .add-btn button {
+        background-color: var(--myred);
+        border:none;
+        border-radius: 3px;
+        color: white;
+        padding: 3px;
+        font-size: 10px;
+        position: relative;
+        bottom: 3px;
+        left: 7px;
+      }
+    }
+    }
+  
+  .main {
+    grid-colum: 2 / 3;
+    background-color: rgba(10,10,10,.05);
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+    .card {
+      margin: 30px;
+      border: 1px solid lightgray;
+      .card-img {
+        max-height: 100px;
+        width: 100%;
+      }
+      .card-title {
+        font-size: 15px;
+        padding: 5px;
+      }
+      .card-text {
+        font-size: 12px;
+          padding: 5px;
+        line-height: 1.4;
+      }
+    }
+  }
+}

@@ -76,8 +76,18 @@ class LinksController < ApplicationController
     prm[:title] = "Testing"
     prm[:description] = 'This is a test'
     prm[:comment] = 'nice'
-    prm[:priority] = params[:priority]
-
+    prm[:priority] = convert_priority(params[:priority])
     prm
+  end
+  
+  def convert_priority(priority)
+    case priority
+      when "for now"
+        return 1
+      when "for later"
+        return 2
+      else
+        return 3
+    end
   end
 end

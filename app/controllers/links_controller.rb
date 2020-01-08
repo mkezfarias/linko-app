@@ -24,7 +24,7 @@ class LinksController < ApplicationController
   # POST /links
   # POST /links.json
   def create
-    @link = current_user.links.new(link_params)
+    @link = current_user.links.new(set_params)
 
 #    respond_to do |format|
       if @link.save
@@ -70,4 +70,14 @@ class LinksController < ApplicationController
     def link_params
       params.require(:link).permit(:title, :url, :priority, :description, :image, :comment)
     end
+
+  def set_params()
+    prm = link_params
+    prm[:title] = "Testing"
+    prm[:description] = 'This is a test'
+    prm[:comment] = 'nice'
+    prm[:priority] = params[:priority]
+
+    prm
+  end
 end

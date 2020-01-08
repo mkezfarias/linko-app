@@ -2,6 +2,15 @@
   <div class="logo">
   </div>
   <nav class="navbar">
+    <%= form_for(@link, html: {class: 'add-url'}) do |f| %>
+      <%= f.text_field :url, placeholder: 'Paste your link here', class: 'input' %>
+      <div class="buttons">
+        <span><strong> Add link:</strong></span>
+        <%= f.submit class: 'button high', name: 'priority', value: '1' %>
+        <%= f.submit class: 'button med', name: 'priority', value: '2' %>
+        <%= f.submit class: 'button low', name: 'priority', value: '3' %>
+      </div>
+    <% end %>
     <form action="post" class="add-url">
       <input class="input" placeholder="Paste your link here" type="text">
       <div class= "buttons">

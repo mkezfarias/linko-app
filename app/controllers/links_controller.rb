@@ -73,10 +73,12 @@ class LinksController < ApplicationController
 
   def set_params()
     prm = link_params
-    prm[:title] = "Testing"
-    prm[:description] = 'This is a test'
-    prm[:comment] = 'nice'
+    object = get_content(prm[:url])
+    prm[:title] = object.title
+    prm[:description] = object.description
+    prm[:comment] = ""
     prm[:priority] = convert_priority(params[:priority])
+    prm[:image] = object.images.first.src.to_s
     prm
   end
   
@@ -89,5 +91,9 @@ class LinksController < ApplicationController
       else
         return 3
     end
+  end
+  
+  def get_content(url)
+    LinkThumbnailer.generate(url)
   end
 end

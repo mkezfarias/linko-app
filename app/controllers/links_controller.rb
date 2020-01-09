@@ -78,7 +78,7 @@ class LinksController < ApplicationController
     prm[:description] = object.description
     prm[:comment] = ""
     prm[:priority] = convert_priority(params[:priority])
-    prm[:image] = object.images.first.src.to_s
+    prm[:image] = object.favicon
     prm
   end
   

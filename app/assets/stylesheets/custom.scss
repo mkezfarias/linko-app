@@ -12,7 +12,11 @@
   padding: 0;
   font-family: sans-serif;
   list-style-type: none;
-  text-decoration: none;  
+  text-decoration: none;
+  a:hover {
+  background: inherit !important;  
+  color: black !important;
+  }
   }
   
 .add-btn {
@@ -154,38 +158,44 @@
   
   .main {
     grid-column: 2 / 3;
-    background-color: rgba(10,10,10,.05);
+    background-color: white;
     display: grid;
-    grid-gap: 20px;
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(100px,200px));
 
     .card {
       display: grid;
-      grid-template-columns: 60px 6fr 1fr;
-      grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
-      margin: 30px;
+      grid-template-columns: 1fr 16fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      margin: 20px 30px 0 30px;
       border: 1px solid lightgray;
-      a {
-        display: block;
-        grid-column: 1 / 2;
-        grid-row: 1 / -1;
-        align-self: center;
-
+      
+      
         .card-img {
-          width: 30px;
+          display: block;
+          grid-column: 1 / 2;
+          grid-row: 1 / -1;
+          align-self: center;
+
+          width: 35px;
           height: auto;
+          border: 1px solid lightgray;
+          border-radius: 30px;
+          background-color: white;
+          position: relative;
+          right: 18px;
         }
-      }
+      
       .card-title {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
-        font-size: 15px;
+        font-size: calc(2px + 1vw);
         padding: 5px;
       }
       .card-text {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
-        font-size: 12px;
+        font-size: calc(2px + 1vw);
         padding: 5px;
         line-height: 1.4;
       }

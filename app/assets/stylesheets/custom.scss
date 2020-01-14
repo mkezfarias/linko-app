@@ -32,6 +32,7 @@
           font-size: 18px;
           font-weight: 700;
           color: white;
+          white-space: nowrap;
         }
 
 .header {
@@ -104,7 +105,7 @@
 
 .container {
   display: grid;
-  grid-template-columns: 2fr 9fr;
+  grid-template-columns: 3fr 10fr;
   
   .sidebar {
    grid-column: 1 / 2;
@@ -161,6 +162,7 @@
     background-color: white;
     display: grid;
     grid-template-columns: 1fr;
+    grid-gap: 10px;
     grid-template-rows: repeat(auto-fit, minmax(100px,200px));
 
     .card {
@@ -193,9 +195,10 @@
         padding: 5px;
       }
       .card-text {
+        font-family: 'B612 Mono', monospace;
         grid-column: 2 / 3;
         grid-row: 2 / 3;
-        font-size: calc(2px + 1vw);
+        font-size: calc(2px + .9vw);
         padding: 5px;
         line-height: 1.4;
       }

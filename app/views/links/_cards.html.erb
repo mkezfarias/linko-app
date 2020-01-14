@@ -4,7 +4,7 @@
     <img src="<%= link.image %>" class="card-img" >
 
   <h3 class="card-title"> <%= link.title %> </h3>
-  <p class="card-text"> <%= link.description %> </p>
+  <p class="card-text"> <%= link.description[0...150] %>...</p>
   <p class="card-actions">icons</p>
 </div>
   <% end %>

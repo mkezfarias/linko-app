@@ -16,5 +16,7 @@
   </nav>
   <% if user_signed_in? %>
     <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'button sign-out' %>
+  <% else %>
+    <%= link_to 'Sign In', new_user_session_path, class: 'button sign-out' %>
   <% end %>
 </header>
